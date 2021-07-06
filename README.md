@@ -23,11 +23,21 @@ To install, download or clone the repo, then:
 
 To run truffle tests, switch from the root folder to eth-contracts:
 
-`cd eth-contracts`  
+`cd eth-contracts/test`  
 
-then run  
+then run this command to execute just one specific test file
 
-`truffle test ./test/TestERC721Mintable.js`  
+`truffle test ./TestERC721Mintable.js`  
+
+or run
+
+`truffle test`
+
+to run all tests at once.
+
+<br>
+
+![Result of truffle test](./images/truffle_test.jpg)
 
 <br>
 
