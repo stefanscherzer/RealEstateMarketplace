@@ -13,37 +13,41 @@ To install, download or clone the repo, then:
 `npm install`  
 
 `cd eth-contracts`  
+
+Create a .secret and a .infurakey file in your __eth-contracts__ folder.  
+See _Steps to migrate the contract to the Rinkeby Ethereum Testnet_ for info on what to add into the files (only needed if you want to migrate your smart contract to a network other than the local network).
+
 `truffle compile`  
 
 `ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat" --accounts=20`
 
 <br>
 
-# Develop
+# Test your smart contracts
 
 To run truffle tests, switch from the root folder to eth-contracts:
 
-`cd eth-contracts/test`  
+`cd eth-contracts`  
 
 then run this command to execute just one specific test file
 
-`truffle test ./TestERC721Mintable.js`  
+`truffle test ./test/TestERC721Mintable.js`  
 
 or run
 
-`truffle test`
+`truffle test ./test/*`
 
 to run all tests at once.
 
 <br>
 
-![Result of truffle test](./images/truffle_test.jpg)
+![Result of truffle test](./images/truffle_test.png)
 
 <br>
 
 # Steps to migrate the contract to the Rinkeby Ethereum Testnet
 
-1. Create a .secret and a .infurakey file in your root folder.<br>
+1. Create a .secret and a .infurakey file in your __eth-contracts__ folder.<br>
    The .secret file holds your Metamask mnemonic phrase.<br>
    In the .infurakey file you need to add your personal Infura PROJECT ID.
 
