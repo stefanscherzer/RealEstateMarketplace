@@ -42,12 +42,12 @@ contract('TestERC721Mintable', accounts => {
             tokenOwner = await this.contract.ownerOf(6);
             assert.equal(tokenOwner, accounts[7], "Wrong Owner - should be #7");
         })
-    });
+    // });
 
-    describe('have ownership properties', function () {
-        beforeEach(async function () { 
-            this.contract = await ERC721MintableComplete.new(name,symbol,{from: account_one});
-        })
+    // describe('have ownership properties', function () {
+    //     beforeEach(async function () { 
+    //         this.contract = await ERC721MintableComplete.new(name,symbol,{from: account_one});
+    //     })
 
         it('should fail when minting when address is not contract owner', async function () { 
             let errorCount = 0;
